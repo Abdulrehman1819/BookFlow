@@ -36,9 +36,9 @@ export default async function CalendarPage({ params, searchParams }: Props) {
     .eq('is_accepting_bookings', true)
 
   return (
-    <div className="flex-1 p-8">
-      <div className="mb-6">
-        <h1 className="text-2xl font-semibold tracking-tight">Calendar</h1>
+    <div className="flex-1 p-4 md:p-8">
+      <div className="mb-4 md:mb-6">
+        <h1 className="text-xl md:text-2xl font-semibold tracking-tight">Calendar</h1>
         <p className="text-muted-foreground text-sm mt-1">
           Week of {format(weekStart, 'MMMM d')} – {format(weekEnd, 'MMMM d, yyyy')}
         </p>

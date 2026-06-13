@@ -38,9 +38,9 @@ export default async function SettingsPage({ params }: Props) {
     : { data: [] }
 
   return (
-    <div className="flex-1 p-8">
-      <div className="mb-8">
-        <h1 className="text-2xl font-semibold tracking-tight">Settings</h1>
+    <div className="flex-1 p-4 md:p-8">
+      <div className="mb-6 md:mb-8">
+        <h1 className="text-xl md:text-2xl font-semibold tracking-tight">Settings</h1>
         <p className="text-muted-foreground text-sm mt-1">Manage your business configuration.</p>
       </div>
       <Tabs defaultValue="general" className="space-y-6">

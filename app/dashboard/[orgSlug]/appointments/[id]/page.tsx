@@ -49,22 +49,22 @@ export default async function AppointmentDetailPage({ params }: Props) {
   if (!appt) notFound()
 
   return (
-    <div className="flex-1 p-8">
-      <div className="mb-6">
-        <Button variant="ghost" size="sm" asChild className="mb-4 -ml-2">
+    <div className="flex-1 p-4 md:p-8">
+      <div className="mb-4 md:mb-6">
+        <Button variant="ghost" size="sm" asChild className="mb-3 -ml-2">
           <Link href={`/dashboard/${orgSlug}/appointments`}>
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to appointments
           </Link>
         </Button>
-        <div className="flex items-start justify-between">
-          <div>
-            <h1 className="text-2xl font-semibold tracking-tight">{appt.customer_name}</h1>
+        <div className="flex items-start justify-between gap-3">
+          <div className="min-w-0">
+            <h1 className="text-xl md:text-2xl font-semibold tracking-tight truncate">{appt.customer_name}</h1>
             <p className="text-muted-foreground text-sm mt-1">
               Appointment #{id.slice(0, 8).toUpperCase()}
             </p>
           </div>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 flex-shrink-0">
             <Badge variant={STATUS_BADGE[appt.status] ?? 'outline'} className="capitalize">
               {appt.status}
             </Badge>
@@ -97,7 +97,7 @@ export default async function AppointmentDetailPage({ params }: Props) {
                 <p className="text-sm text-muted-foreground">{appt.service.description}</p>
               )}
               <Separator />
-              <div className="grid grid-cols-2 gap-4 text-sm">
+              <div className="grid sm:grid-cols-2 gap-3 sm:gap-4 text-sm">
                 <div className="flex items-center gap-2">
                   <Calendar className="w-4 h-4 text-muted-foreground" />
                   <span>{format(parseISO(appt.start_time), 'EEEE, MMMM d, yyyy')}</span>

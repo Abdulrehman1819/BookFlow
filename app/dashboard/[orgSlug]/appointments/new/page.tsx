@@ -40,8 +40,8 @@ export default async function NewAppointmentPage({ params }: Props) {
   ])
 
   return (
-    <div className="flex-1 p-8">
-      <div className="mb-8">
+    <div className="flex-1 p-4 md:p-8">
+      <div className="mb-6 md:mb-8">
         <Button variant="ghost" size="sm" asChild className="-ml-2 mb-4">
           <Link href={`/dashboard/${orgSlug}/appointments`}>
             <ArrowLeft className="w-4 h-4 mr-2" />

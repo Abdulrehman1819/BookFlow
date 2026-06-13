@@ -39,7 +39,7 @@ export default async function BookingPage({ params }: Props) {
     <div className="min-h-screen bg-background">
       {/* Header */}
       <header className="border-b border-border bg-background sticky top-0 z-40">
-        <div className="max-w-3xl mx-auto px-6 py-4 flex items-center justify-between">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
             {org.logo_url ? (
               <img src={org.logo_url} alt={org.name} className="w-8 h-8 rounded-lg object-cover" />
@@ -68,7 +68,7 @@ export default async function BookingPage({ params }: Props) {
         </div>
       </header>
 
-      <main className="max-w-3xl mx-auto px-6 py-8">
+      <main className="max-w-3xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
         <BookingFlow
           org={org}
           services={services ?? []}

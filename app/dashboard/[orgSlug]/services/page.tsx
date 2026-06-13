@@ -20,9 +20,9 @@ export default async function ServicesPage({ params }: Props) {
     .order('created_at')
 
   return (
-    <div className="flex-1 p-8">
-      <div className="mb-8">
-        <h1 className="text-2xl font-semibold tracking-tight">Services</h1>
+    <div className="flex-1 p-4 md:p-8">
+      <div className="mb-6 md:mb-8">
+        <h1 className="text-xl md:text-2xl font-semibold tracking-tight">Services</h1>
         <p className="text-muted-foreground text-sm mt-1">
           Define what your business offers and how long each service takes.
         </p>

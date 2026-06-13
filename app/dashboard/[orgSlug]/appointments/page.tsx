@@ -52,18 +52,19 @@ export default async function AppointmentsPage({ params, searchParams }: Props) 
   const appointments = (data ?? []) as ApptRow[]
 
   return (
-    <div className="flex-1 p-8">
-      <div className="flex items-center justify-between mb-8">
+    <div className="flex-1 p-4 md:p-8">
+      <div className="flex items-start sm:items-center justify-between gap-4 mb-6 md:mb-8">
         <div>
-          <h1 className="text-2xl font-semibold tracking-tight">Appointments</h1>
+          <h1 className="text-xl md:text-2xl font-semibold tracking-tight">Appointments</h1>
           <p className="text-muted-foreground text-sm mt-1">
             {count ?? 0} total appointments
           </p>
         </div>
-        <Button size="sm" asChild>
+        <Button size="sm" asChild className="flex-shrink-0">
           <Link href={`/dashboard/${orgSlug}/appointments/new`}>
-            <Plus className="w-4 h-4 mr-2" />
-            New appointment
+            <Plus className="w-4 h-4 mr-1 sm:mr-2" />
+            <span className="hidden sm:inline">New appointment</span>
+            <span className="sm:hidden">New</span>
           </Link>
         </Button>
       </div>

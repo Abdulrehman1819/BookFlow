@@ -77,8 +77,8 @@ export function AppointmentsTable({ appointments, orgSlug, total, page, pageSize
       </div>
 
       {/* Table */}
-      <div className="rounded-lg border border-border overflow-hidden">
-        <Table>
+      <div className="rounded-lg border border-border overflow-hidden overflow-x-auto">
+        <Table className="min-w-[640px]">
           <TableHeader>
             <TableRow className="bg-muted/30 hover:bg-muted/30">
               <TableHead className="font-medium text-xs">Customer</TableHead>

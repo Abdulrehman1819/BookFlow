@@ -55,21 +55,21 @@ export default function HomePage() {
       </header>
 
       {/* Hero */}
-      <section className="flex-1 flex items-center justify-center px-6 py-24 text-center">
-        <div className="max-w-3xl">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-border bg-muted text-xs text-muted-foreground mb-8">
+      <section className="flex-1 flex items-center justify-center px-4 sm:px-6 py-16 sm:py-24 text-center">
+        <div className="max-w-3xl w-full">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-border bg-muted text-xs text-muted-foreground mb-6 sm:mb-8">
             <span className="w-1.5 h-1.5 rounded-full bg-green-500"></span>
             Production-ready SaaS booking platform
           </div>
-          <h1 className="text-5xl md:text-6xl font-semibold tracking-tight text-foreground mb-6 leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold tracking-tight text-foreground mb-5 sm:mb-6 leading-tight">
             Appointment booking
             <br />
             <span className="text-muted-foreground">built for your business</span>
           </h1>
-          <p className="text-lg text-muted-foreground mb-10 max-w-xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg text-muted-foreground mb-8 sm:mb-10 max-w-xl mx-auto leading-relaxed">
             A professional scheduling platform for service businesses. Let customers book online, manage your team&apos;s availability, and never miss an appointment.
           </p>
-          <div className="flex items-center justify-center gap-4 flex-wrap">
+          <div className="flex items-center justify-center gap-3 sm:gap-4 flex-wrap">
             <Button size="lg" asChild>
               <Link href="/register">
                 Start for free <ArrowRight className="ml-2 w-4 h-4" />
@@ -96,15 +96,15 @@ export default function HomePage() {
       </section>
 
       {/* Features */}
-      <section id="features" className="py-24 px-6">
+      <section id="features" className="py-16 sm:py-24 px-4 sm:px-6">
         <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-semibold tracking-tight mb-4">Everything you need to run appointments</h2>
+          <div className="text-center mb-10 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight mb-4">Everything you need to run appointments</h2>
             <p className="text-muted-foreground max-w-lg mx-auto">
               From your first booking to managing a team of 50 — BookFlow scales with your business.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
             {features.map(feature => (
               <div key={feature.title} className="p-6 rounded-xl border border-border hover:border-foreground/20 transition-colors">
                 <div className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center mb-4">
@@ -119,7 +119,7 @@ export default function HomePage() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 px-6 border-t border-border bg-muted/20">
+      <section className="py-16 sm:py-24 px-4 sm:px-6 border-t border-border bg-muted/20">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-3xl font-semibold tracking-tight mb-4">Ready to streamline your bookings?</h2>
           <p className="text-muted-foreground mb-8">Join thousands of businesses using BookFlow to manage appointments.</p>

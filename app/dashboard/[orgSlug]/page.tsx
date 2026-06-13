@@ -78,9 +78,9 @@ export default async function DashboardOverviewPage({ params }: Props) {
   }
 
   return (
-    <div className="flex-1 p-8">
-      <div className="mb-8">
-        <h1 className="text-2xl font-semibold tracking-tight">Overview</h1>
+    <div className="flex-1 p-4 md:p-8">
+      <div className="mb-6 md:mb-8">
+        <h1 className="text-xl md:text-2xl font-semibold tracking-tight">Overview</h1>
         <p className="text-muted-foreground text-sm mt-1">
           {format(now, 'EEEE, MMMM d, yyyy')}
         </p>
@@ -88,7 +88,7 @@ export default async function DashboardOverviewPage({ params }: Props) {
 
       <OverviewStats stats={stats} />
 
-      <div className="grid lg:grid-cols-3 gap-6 mt-8">
+      <div className="grid lg:grid-cols-3 gap-6 mt-6 md:mt-8">
         <div className="lg:col-span-2">
           <TodaySchedule appointments={todayAppointments.data ?? []} orgSlug={orgSlug} />
         </div>

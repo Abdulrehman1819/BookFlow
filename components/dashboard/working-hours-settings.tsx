@@ -70,38 +70,41 @@ export function WorkingHoursSettings({ employeeId, organizationId, workingHours 
       <CardHeader>
         <CardTitle className="text-base font-medium">Working Hours</CardTitle>
       </CardHeader>
-      <CardContent className="space-y-4">
+      <CardContent className="space-y-3">
         {Object.entries(days).map(([dayStr, config]) => {
           const day = Number(dayStr)
           return (
-            <div key={day} className="flex items-center gap-4">
-              <Switch
-                checked={config.active}
-                onCheckedChange={val =>
-                  setDays(prev => ({ ...prev, [day]: { ...prev[day], active: val } }))
-                }
-              />
-              <span className={`text-sm w-24 ${config.active ? 'text-foreground' : 'text-muted-foreground'}`}>
-                {DAY_NAMES[day]}
-              </span>
-              {config.active ? (
-                <div className="flex items-center gap-2 flex-1">
+            <div key={day} className="py-1">
+              <div className="flex items-center gap-3">
+                <Switch
+                  checked={config.active}
+                  onCheckedChange={val =>
+                    setDays(prev => ({ ...prev, [day]: { ...prev[day], active: val } }))
+                  }
+                />
+                <span className={`text-sm font-medium w-24 shrink-0 ${config.active ? 'text-foreground' : 'text-muted-foreground'}`}>
+                  {DAY_NAMES[day]}
+                </span>
+                {!config.active && (
+                  <span className="text-sm text-muted-foreground">Unavailable</span>
+                )}
+              </div>
+              {config.active && (
+                <div className="flex items-center gap-2 mt-2 ml-[52px]">
                   <Input
                     type="time"
                     value={config.start}
                     onChange={e => setDays(prev => ({ ...prev, [day]: { ...prev[day], start: e.target.value } }))}
-                    className="text-sm"
+                    className="text-sm h-8"
                   />
-                  <span className="text-muted-foreground text-sm shrink-0">to</span>
+                  <span className="text-muted-foreground text-sm shrink-0">–</span>
                   <Input
                     type="time"
                     value={config.end}
                     onChange={e => setDays(prev => ({ ...prev, [day]: { ...prev[day], end: e.target.value } }))}
-                    className="text-sm"
+                    className="text-sm h-8"
                   />
                 </div>
-              ) : (
-                <span className="text-sm text-muted-foreground flex-1">Unavailable</span>
               )}
             </div>
           )

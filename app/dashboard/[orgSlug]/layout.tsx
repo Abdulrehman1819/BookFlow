@@ -45,7 +45,7 @@ export default async function DashboardLayout({ children, params }: Props) {
         role={membership.role}
         user={{ email: user.email!, ...profile }}
       />
-      <main className="flex-1 flex flex-col min-w-0">
+      <main className="flex-1 flex flex-col min-w-0 pt-14 md:pt-0">
         {children}
       </main>
     </div>
